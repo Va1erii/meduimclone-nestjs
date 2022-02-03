@@ -6,7 +6,9 @@ import { ConnectionOptions } from "typeorm";
      port: 5432,
      username: 'mediumclone',
      password: 'Admin123',
-     database: 'mediumclone'
+     database: 'mediumclone',
+     entities: [__dirname + '/**/*.entity{.ts,.js}'],
+     synchronize: true
  };
 
  export default config;
