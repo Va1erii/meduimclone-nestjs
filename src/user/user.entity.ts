@@ -14,13 +14,13 @@ export class UserEntity {
     @Column()
     email: string;
 
-    @Column({default: ''})
+    @Column({ default: '' })
     bio: string;
 
-    @Column({default: ''})
+    @Column({ default: '' })
     image: string;
 
-    @Column()
+    @Column({ select: false })
     password: string;
 
     @BeforeInsert()
