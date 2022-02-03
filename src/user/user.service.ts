@@ -42,6 +42,12 @@ export class UserService {
         );
     }
 
+    async findUserById(id: number): Promise<UserEntity> {
+        return this.userRepository.findOne({
+            id: id
+        });
+    }
+
     buildUserResponse(user: UserEntity): UserResponseInterface {
         return {
             user: {
